@@ -129,12 +129,21 @@ $(document).ready(function(){
         
         success: function (response) {
             if(response.data == "true")
+
             {
                 Data();
+                $(".first_error").html("");
+                $(".last_error").html("");
+                $(".gender_error").html("");
+                $(".password_error").html("");
+                $(".profile_error").html("");
+                $(".email_error").html("");
+                $(".birth_date_error").html("");
+
             }
             else{
-                printErrorMsg(response.error);
                 Data();
+                printErrorMsg(response.error);
             }
         }
     });
@@ -168,6 +177,7 @@ $(document).ready(function(){
             if (key == "birth_date") {
                 $(".birth_date_error").html(value);
             }
+           
         });
     }
 

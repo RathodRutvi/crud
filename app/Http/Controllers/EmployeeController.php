@@ -51,7 +51,7 @@ class EmployeeController extends Controller
             'email'=>'required|email',
             'user_name'=>'required',
             'birth_date'=>'required',
-            'password'=>'required|confirmed|min:8',
+            'password'=>'required|min:8',
             'confirm_password'=>'required',
         ]);
        
